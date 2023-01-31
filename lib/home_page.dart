@@ -37,9 +37,9 @@ class _HomePageState extends State<HomePage> {
           icons: const [Icons.show_chart, Icons.history],
           iconSize: 30,
           activeIndex: _currentTab,
-          onTap: (int) {
+          onTap: (number) {
             setState(() {
-              _currentTab = int;
+              _currentTab = number;
               if (_currentTab == 0) {
                 _currentScreen = const GraphPage();
               } else {

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
-import 'home_page.dart';
+import 'package:getx_first_long_example/views/home_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -19,8 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
-      ),
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
+          primaryColor: Colors.black),
       home: const HomePage(),
     );
   }

@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:get/get.dart';
-import 'package:getx_first_long_example/graph_view.dart';
+import 'package:getx_first_long_example/views/add_record_view.dart';
+import 'package:getx_first_long_example/views/graph_view.dart';
 
 import 'history_screen.dart';
 
@@ -24,7 +25,9 @@ class _HomePageState extends State<HomePage> {
       body: _currentScreen,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
-        onPressed: () {},
+        onPressed: () {
+          Get.to(const AddRecordView());
+        },
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -43,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               if (_currentTab == 0) {
                 _currentScreen = const GraphPage();
               } else {
-                _currentScreen = const HistoryPage();
+                _currentScreen = HistoryPage();
               }
             });
           }),
